@@ -1,9 +1,21 @@
+// @function randomColor(){
+// 	$red: random(256)-1; 
+// 	$green: random(256)-1; 
+// 	$blue: random(256)-1;
+// 	@return rgb($red, $green, $blue);
+// }
+ 
+
+
 body {
     margin: 0;
     padding: 0;
     background-image: url('images/parquet.jpg');
     background-position: center;
     font-family: "Inter", sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -11,15 +23,17 @@ body {
     height: auto;
     transform: rotate(-20deg);
     padding: 2%;
+    position: fixed;
 }
 
 #card-container {
-    padding: 5%;
+    padding: 15% 5% 5% 5%;
     margin: 0;
+    // padding-left: 5%;
     display: flex;
     background-repeat: no-repeat;
     height: 100vh;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     perspective: 1000px; 
@@ -114,7 +128,7 @@ body {
         // text-align: center;
         font-size: 1.5rem;
         font-weight: bold;
-        background-color: #ea953c;
+        // background-color: randomColor();
         position: relative;
         z-index: 2;
     }
@@ -140,7 +154,8 @@ body {
         height: 80px;
         opacity: 1;
         color: white;
-        background-color: #ea953c;
+        mix-blend-mode: difference;
+        // background-color: randomColor();
         border-radius: 0px 0px 20px 20px;
         transition: all 0.5s ease-out;
         
