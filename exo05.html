@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img class="logo" src="images/toy-story-logo.png" alt="Logo toy story">
+    <div id="card-container">
+        
+        </div>
+        
+        
+
+    <p>forEach() :</p>
+
+    <p id="demo">
+
+    </p>
+
+    <script>
+        var text = "";
+        fetch('datastory.json')
+        .then( function (reponse) {
+            return reponse.json();
+        })
+        
+        .then( function (data) {
+            console.log(data);
+
+            tableau.forEach(function (element) {
+            text += '<div class="toy-card__name">' + element.nom + '</div>';
+            text += '<div class="toy-card__description">' + element.info + '</div>';
+
+        });
+        document.getElementById("demo").innerHTML = text;
+            
+        })
+
+        
+
+        
+    </script>
+</body>
+
+</html>
